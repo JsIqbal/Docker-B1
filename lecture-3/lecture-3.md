@@ -48,3 +48,13 @@
 17. operating system runs all the process.
 
 18. the OS that can utilize the best performance by randomly running all the processes is called the best OS.
+
+19. memory management is done by OS.
+
+20. Browser itself is a process and the browser needs multiple process ru to be able to work properly. that's why browser creates multiple processes by the help of operatig system and the operating system devides all the process's in multiple clockspeeds.
+
+21. one process can have multiple block of code and each block can be a thread.
+
+22. process and threads are created by the os and handled by the os.
+
+23. Os can create thousands of threds and this is dynamic.

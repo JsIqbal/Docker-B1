@@ -58,3 +58,5 @@
 22. process and threads are created by the os and handled by the os.
 
 23. Os can create thousands of threds and this is dynamic.
+
+24. Nodejs by using the OS and libvv can use the threadpool of the OS and can create multiple threads.

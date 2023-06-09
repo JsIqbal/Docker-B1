@@ -60,27 +60,3 @@
 23. Os can create thousands of threds and this is dynamic.
 
 24. Nodejs by using the OS and libvv can use the threadpool of the OS and can create multiple threads.
-
-```javascript 
-// first class function:
-
-function math(sum, devide) {
-    var x = sum(10, 15);
-    var y = devide(20, 10);
-
-    var z = x + y;
-    console.log(z);
-}
-
-function a(p, q) {
-    return p + q;
-}
-
-function b(s, t) {
-    return s / t;
-}
-
-var result = math(a, b);
-
-console.log(result);
-```

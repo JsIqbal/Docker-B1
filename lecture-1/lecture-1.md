@@ -39,7 +39,7 @@ When an executable file is clicked, the binary form of the file is loaded into t
 ### Processing Unit and Register Set
 
 9. The processing unit performs a limited set of operations, such as addition, subtraction, multiplication, division, logical AND, OR, and NOT.
-10. The register set consists of multiple registers, such as ax, bx, cx, px, etc.
+10. The register set consists of multiple registers, such as: ax, bx, cx, px, etc.
 11. One specific register is the pointing register.
 12. Each register is a single cell memory, and the pointing register is a single memory cell that can store only one binary executable line (32-bit or 64-bit).
 13. If the processor's register set's cell memory is 32-bit, the computer is considered a 32-bit computer.

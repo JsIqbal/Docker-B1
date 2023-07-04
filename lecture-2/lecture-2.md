@@ -5,7 +5,7 @@ human branin has 2 parts:
 1. analysis part of the brain and
 2. storage part of the brain.
 
-all the experience that a human xan have are never lost from the brain.
+all the experience that a human brain have are never lost from the brain.
 Like:
 
 1. all the things seen by the eye are stored.
@@ -44,7 +44,7 @@ also this ending point is kept in the pcb or process control block
 
 switching between process is called context switching
 
-pcb's state is the screenshot of the register setband the screenshot will always be uniquely identified
+pcb's state is the screenshot of the register set and the screenshot will always be uniquely identified
 
 process's state is kept in the process
 

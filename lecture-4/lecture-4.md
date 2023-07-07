@@ -1,27 +1,27 @@
-1. OS maps the applications execution codes address in an icon so that whenever the icon is clicked then the application starts
-2. Assumption: when a software in installed the first time this mapping happens
+1. The operating system (OS) maps the application's execution code address to an icon so that whenever the icon is clicked, the application starts. This mapping usually occurs during the installation of the software for the first time.
 
-!!! if there are any wonderful creation in computer science then they are : browser and Operating System
+2. An assumption: When software is installed for the first time, this mapping process takes place.
 
-google chrome has task codes: those codes are said to be threads or virtual process
+If there are any wonderful creations in computer science, they are the browser and the operating system.
 
-suppose we are running 2 process: 1. google chrome -> 10 ms of cloockspeed
-google chrome has 2 tabs -> 10 ms of cloockspeed will be devided equally between:
-a. youtube -> 5ms of cloockspeed
-b. facebook -> 5ms of cloockspeed
-And the 2 threads created by google chrome will be doing context switching between them and we will see cncurrency. 2. vs code
+Google Chrome has task codes, which are often referred to as threads or virtual processes.
 
-3. threads state is kept in the process itself and that's why it's faster
+Suppose we are running two processes:
+1. Google Chrome: 10 ms of clock speed
+   - Google Chrome has two tabs:
+     - YouTube: 5 ms of clock speed
+     - Facebook: 5 ms of clock speed
+   The two threads created by Google Chrome will perform context switching between them, resulting in concurrency.
+2. VS Code
 
-4. cpu gets devided in process through cpu time
-   Q: what happens when 2 equaly cpu time devided process does't finish on the cpu time?
+The state of threads is kept within the process itself, which contributes to faster performance.
 
-5. processor gives power to the Operating system and the operating system devides the clockspeed between them
-   this is why we can see all the cpu are working in the task manager.
+CPU time is divided among processes through time slicing. If two processes with equal CPU time allocation do not finish within the given time, the scheduler will interrupt the processes and allocate time to other processes.
 
-6. A single process can created multiple process and those mutiple processes can create multiple helper processes and those processes can have multiple threads.
-   example: open 6 tabs in google chrome and you will see there are 20-25 processes running for google chrome.
+The processor provides power to the operating system, and the operating system distributes the clock speed among them. This is why we can observe all CPUs working in the task manager.
 
-This is because google chrome is a very heavy software and it needs multiple CPUs to run parallelly and have parallel execution and for parallel execution a software needs to have multiple processes.
+A single process can create multiple processes, and those multiple processes can create multiple helper processes. These processes can have multiple threads. For example, opening six tabs in Google Chrome may result in 20-25 processes running for Google Chrome.
 
-Nodejs by using the OS and libvv can use the threadpool of the OS and can create multiple threads.
+Google Chrome is a heavyweight software that requires multiple CPUs to run in parallel and achieve parallel execution. For parallel execution, software needs to have multiple processes.
+
+Node.js, by utilizing the OS and libuv, can leverage the thread pool of the OS and create multiple threads.

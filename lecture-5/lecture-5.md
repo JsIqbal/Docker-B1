@@ -1,5 +1,8 @@
 Hardware -> Operating System -> All Applications
 
-in case of virtual machine: hardware -> Host Operating System -> Hypervisor -> guest OS -> applications
+In the case of a virtual machine:
+Hardware -> Host Operating System -> Hypervisor -> Guest OS -> Applications
 
-in case of docker: hardware -> Host Operating System -> Docker engine -> containers -> applications
+In the case of Docker:
+Hardware -> Host Operating System -> Docker Engine -> Containers -> Applications
+

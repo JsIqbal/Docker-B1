@@ -1,147 +1,71 @@
-docker --version -> to check the version of docker
-docker run hello-world -> to check if docker is working fine
+## Docker Basics
 
-when we will use docker we need to know operating system
+- To check the version of Docker: `docker --version`
+- To check if Docker is working fine: `docker run hello-world`
 
-we need to use ubuntu for docker..we will be using lots of comands
+When using Docker, it is important to understand the underlying operating system. For Docker, Ubuntu is commonly used, and many commands will be performed within an Ubuntu environment.
 
-go to docker hub -> check operating systems
+To work with Docker:
+1. Go to Docker Hub and check the available operating systems.
+2. Pull the Ubuntu image from Docker Hub: `docker pull ubuntu`
+3. Run the Ubuntu image: `docker run ubuntu`
+4. To run Ubuntu in interactive mode: `sudo docker run -it ubuntu` (You will see the command prompt as `root@<container_id>:/#`)
+5. To run Ubuntu and access the shell: `sudo docker run -it ubuntu sh` (You will see the command prompt as `#`)
 
-docker pull ubuntu -> ubuntu will come which is a software that came in our computer
+Inside the Ubuntu container, you can use various commands such as `ls`, `cd`, `pwd`, etc. All commands that are available in Ubuntu can be executed inside Docker.
 
-docker run ubuntu -> to run the ubuntu got from docker hub
+Docker provides an Ubuntu environment within minutes, allowing for easy testing and execution of commands.
 
-sudo docker run -it ubuntu -> root@35c3bf425181:/#
+## Docker Overview
 
+Docker is an ecosystem or platform, similar to a food chain, and consists of the following components:
 
-sudo docker run -it ubuntu sh -> #
+1. Docker client
+2. Docker server (daemon)
+3. Docker machine
+4. Docker images
+5. Docker Hub (a website for sharing Docker images)
+6. Docker Compose (used for defining and running multi-container Docker applications)
 
-inside the ubuntu :
-    use comands : ls, cd, pwd
-    we can use all the comands in the ubuntu inside docker
+The main purpose of Docker is to create and run containers. A container is an instance of an image.
 
-docker gave us ubuntu within 1 minute
+When installing Docker, a Docker machine is typically installed, which consists of the Docker client and Docker server. The Docker client sends commands to the Docker server (daemon), which is a large process responsible for handling requests.
 
-what is docker?
-1. ecosystem or platform. ex : food chain
-6 docker part : docker client, docker server, docker machine, docker images, docker hub, docker compose
-work of docker : create container and run it.
+To pull an image from Docker Hub, the `docker pull <image>` command is received by the Docker CLI, instructing it to execute the "pull" command. This command is then sent to the Docker server (daemon).
 
-docker machine has 2 part : docker client and docker server
-inside docker machine there is image
+An image is a single file that contains the software, its dependencies, and configurations. It is a snapshot of the file system.
 
-Question : when we install docker we normally install a docker machine ?
-yes.
-docker machine has 2 part : docker client and docker server
-when we write docker pull ubuntu : this comand is receieved by docker cli..that means we are telling the docker cli to execute pull ubuntu comand
+Images are used to create containers. Containers are instances of images. Multiple containers can be created using a single image.
 
-pull ubuntu is sent to docker server which is a docker daemon which is a big process
+The benefits of using Docker include:
+1. Simplified software installation without worrying about setup or dependencies.
+2. Ensuring consistency across different machines and environments.
+3. Easy portability and scalability of applications.
 
-docker hub : website
-docker componse : upcoming???
+To list running containers, you can use the `docker ps` command.
 
-image: docker run -it ubuntu -> in here the ubuntu stands for image
-    docker image is a single file:
-        this file has all dependency and configuration
-    the software + dependencies + configuration = image
+The `docker run <image>` command starts and destroys a Docker container.
 
-image is a picture of the file system
-image is a single file -> this has the picture of the file system
-image is the snapshot of the file system
+To access the shell within a container, you can use the `docker run -it <image> sh` command.
 
-# basically we pull an image from docker hub . image means snapshot of file system. 
+Inside the container, you can perform various operations, such as creating directories (`mkdir`), changing directories (`cd`), etc. The prompt may show `#` for the root user or `$` for a normal user.
 
-image is used to create containers.
+Components of an operating system include process management, interprocess communication, process scheduling, memory management, and file system management. Linux is popular for its file system.
 
-container : instance of image
+Linux treats every software as a file. When something is installed in Linux, it is saved on the hard drive as a file.
 
-when we say docker run -it an_image
-we basically say that run the file system from the last snapshot
+In Linux, processes communicate with hardware through system calls made to the kernel. The kernel is responsible for managing CPU, memory, and hard disk resources.
 
-where we put image : docker machine
-where image run : container
+Isolating hard drive resources is possible in Linux through a concept called namespacing. Namespacing allows the kernel to provide different versions of software based on system calls made by different processes.
 
-we can create multiple containers using a single image
+Containers also utilize namespacing and control groups to isolate resources. A container consists of a portion of RAM, CPU, network, hard drive, and the kernel, all together forming a mini-computer.
 
-why use docker?
+## Summary
 
-1. installing software : download > run > error > troubleshoot > rerun installer > get another error > troubleshoot > etc...
-2. we have a software that runs in one machine and not run in another machine..docker fix this issue
-3. docker makes it really easy to install and run software without worrying about setup or dependencies
-
-docker ps -> docker container lists
-
-docker run ubuntu -> start and destroy docker container
-
-docker run -it ubuntu sh -> start the ubuntu image in a container and get inside the container
-it -> interective , this is an option 
-sh -> means i want to get inside the ubuntu and give me a shell
-mkdir iqbal -> make directory
-cd -> change directory
-# -> superuser
-$ -> normal user
-
-touch filename -> create a new file in linux
-
-cd .. -> go back to previous folder
-
-Components of OS : process manage, interprocess, communication, process sceduling, memory manage, process management, file system management
-linux is popular for file system
-
-ls -> list
-ls -> list item by line by line
-
-drwxr-xr-x  4 jsiqbal jsiqbal 4096 Jun 28 13:34 Desktop -> in here d stands for directory
-
-cd -> change direcotory
-pwd -> present working directory
-
-In linux every software is a file..
-if we install something in linux it is saved in linux harddrive as a file
-
-Linux OS :
-
-cpu + memory + hard disk -> kernel -> system calls -> processes like nodejs or chrome
-
-the processes talks to hardware through system calls by the Kernel.
-Kernel is the OS
-
-problem:
-hard drive has python v2.
-chrome needs python v2
-nodejs needs python v3
-
-solution
-isolate hard drive. (only possible in linux)
-
-concept : namespacing
-
-if chrome makes a system call then kernel gives python v2
-
-what is namespacing: per process resources isolation
-control groups : control the resources for isolated namespaces
-
-container also has namespacing and control group
-
-container : portion of -> ram, cpu, network, hard drive, kernel everything together forms a container. ultimately a mini computer.
-
-
-image has 2 part : file system snapshot . ex : chrome, python
-                    startup command -> run chrome
-                the creator gives the startup comand and creates the file system
-
-docker
-why docker
-image
-container
-docker hub
-docker pull
-docker run
-docker client
-docker server
-interective run
-shell comand
-file system
-various comands
-comand elaboration
-
+- Docker is a platform that allows for the creation and management of containers.
+- Images are snapshots of file systems, containing software, dependencies, and configurations.
+- Containers are instances of images, providing isolated environments for running applications.
+- Docker Hub is a repository for sharing and accessing Docker images.
+- Docker client communicates with the Docker server (daemon) to execute commands and manage containers.
+- Docker allows for simplified software installation, consistency across environments, and easy portability of applications.
+- Containers utilize namespacing and control groups to isolate resources and provide an environment similar to a mini-computer.

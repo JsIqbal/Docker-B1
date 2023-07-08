@@ -20,7 +20,7 @@
 ### 32-bit and 64-bit Computers
 - A 32-bit computer refers to a system that processes data in 32-bit chunks.
 - A 64-bit computer refers to a system that processes data in 64-bit chunks.
-- The main difference is the size of memory addresses that the computer can handle. A 32-bit system can address up to 4GB of RAM, while a 64-bit system can handle significantly more.
+- The main difference is the size of memory addresses that the computer can handle.
 
 ## Processor
 

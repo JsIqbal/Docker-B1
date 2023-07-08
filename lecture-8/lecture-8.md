@@ -148,7 +148,7 @@
 ### How do Windows and Mac have Containers without Namespacing?
 - Windows and Mac use virtualization technologies to enable containerization without relying on namespacing alone.
 - Windows uses a technology called Hyper-V, while Mac uses HyperKit, which are lightweight hypervisors.
-- These hypervisors create and manage lightweight virtual machines (VMs) that run a Linux distribution.
+- These hypervisors create and manage lightweight virtual machines (VMs) that run a Linux distribution which is WSL or windows subsystem for linux.
 - Containers are then deployed within these VMs, providing an isolated runtime environment.
 - The advantage of this approach is that it allows for containerization on systems that do not have native support for Linux namespaces, as found in Linux-based operating systems.
 

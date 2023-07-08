@@ -146,8 +146,12 @@
 - It is like a virtual computer that runs on a host system, sharing the host OS kernel but with its own isolated file system and resources.
 
 ### How do Windows and Mac have Containers without Namespacing?
-- Windows and Mac use a lightweight virtualization technology called Hyper-V (Windows) and HyperKit (Mac) to provide containerization without namespacing.
-- These technologies create lightweight virtual machines (VMs) that run a Linux distribution, enabling the use of containers.
+- Windows and Mac use virtualization technologies to enable containerization without relying on namespacing alone.
+- Windows uses a technology called Hyper-V, while Mac uses HyperKit, which are lightweight hypervisors.
+- These hypervisors create and manage lightweight virtual machines (VMs) that run a Linux distribution.
+- Containers are then deployed within these VMs, providing an isolated runtime environment.
+- The advantage of this approach is that it allows for containerization on systems that do not have native support for Linux namespaces, as found in Linux-based operating systems.
+
 
 ### Docker Client & Server
 - The Docker client is the CLI tool used to interact with Docker and send commands to the Docker server.

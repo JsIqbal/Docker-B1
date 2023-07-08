@@ -139,7 +139,7 @@
 ### Kernel, Namespacing, and Control Groups
 - The kernel is the core of the operating system that interacts with hardware and provides essential services to applications.
 - Namespacing is a feature of the Linux kernel that allows for resource isolation and process-level virtualization.
-- Control groups (cgroups) are a kernel feature that manages and limits the resources available to processes within a container.
+- Control groups (cgroups) are a kernel feature that manages and limits the resources available to processes within a container. A container is also created using namespacing and control groups.
 
 ### What is a Container? (Virtual Computer)
 - A container is a lightweight and isolated runtime environment that encapsulates an application and its dependencies.

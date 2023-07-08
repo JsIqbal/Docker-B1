@@ -1,20 +1,13 @@
-Components of OS : process manage, interprocess, communication, process sceduling, memory manage, process management, file system management
-linux is popular for file system
+In the example above, `d` stands for directory.
 
-ls -> list
-ls -> list item by line by line
+- `cd`: Changes the current directory
+- `pwd`: Prints the present working directory
 
-drwxr-xr-x  4 jsiqbal jsiqbal 4096 Jun 28 13:34 Desktop -> in here d stands for directory
+In Linux, every software is treated as a file. When something is installed in Linux, it is saved on the hard drive as a file.
 
-cd -> change direcotory
-pwd -> present working directory
+Linux OS:
 
-In linux every software is a file..
-if we install something in linux it is saved in linux harddrive as a file
+- CPU + memory + hard disk -> Kernel -> System calls -> Processes (e.g., Node.js or Chrome)
 
-Linux OS :
+Processes communicate with hardware through system calls made to the kernel. The kernel acts as the OS.
 
-cpu + memory + hard disk -> kernel -> system calls -> processes like nodejs or chrome
-
-the processes talks to hardware through system calls by the Kernel.
-Kernel is the OS

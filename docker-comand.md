@@ -1,45 +1,34 @@
-docker ps - docker processes
+## Docker Commands
 
-docker image - docker images pulled in the machine.
+- `docker ps`: Lists Docker processes (running containers)
+- `docker image`: Lists Docker images pulled on the machine
+- `docker run -it ubuntu` or `winpty docker run -it ubuntu`: Runs the Ubuntu image in a Docker container
+    - `root@123wers12:/#`: The prompt inside the container
+        - `root`: The user
+        - `@`: Divider
+        - `123wers12`: The operating system's machine name
+        - `/`: The directory
+        - `#`: Superuser
+        - `$`: Normal user
+- `ctrl + l`: Changes the view in Git Bash
+- `echo <whatever you want>`: Prints the given text
 
-docker run -it ubuntu or winpty docker run -it ubuntu- run the ubuntu image in the docker container
+## Requirements for the Next Class
 
-root@123wers12:/#
+- Ubuntu OS installed
+- Docker installed
+- Pull an Ubuntu image from Docker Hub inside Docker
 
-root means the user.
-@ is the devider
-the random number after @ is the operating system's machine name.
+Additional Docker Commands:
 
-:
-/ - the directory
-
-# - supersuser
-
-or
-$ - normal user
-
-ctrl + l - change view in gitbash
-
-echo <whatever you want>
-
-next class requirements:
-
-ubuntu os
-docker installed
-inside docker pull an ubuntu image from docker hub
-
-docker ps -> docker container lists
-
-docker run ubuntu -> start and destroy docker container
-
-docker run -it ubuntu sh -> start the ubuntu image in a container and get inside the container
-it -> interective , this is an option 
-sh -> means i want to get inside the ubuntu and give me a shell
-mkdir iqbal -> make directory
-cd -> change directory
-# -> superuser
-$ -> normal user
-
-touch filename -> create a new file in linux
-
-cd .. -> go back to previous folder
+- `docker ps`: Lists Docker containers
+- `docker run ubuntu`: Starts and destroys a Docker container
+- `docker run -it ubuntu sh`: Starts the Ubuntu image in a container and gets inside the container
+    - `it`: Interactive mode (option)
+    - `sh`: Starts an interactive shell inside the Ubuntu container
+- `mkdir iqbal`: Creates a new directory
+- `cd`: Changes the current directory
+- `#`: Superuser prompt
+- `$`: Normal user prompt
+- `touch filename`: Creates a new file in Linux
+- `cd ..`: Goes back to the previous folder

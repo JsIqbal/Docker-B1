@@ -155,7 +155,7 @@
 
 ### Docker Client & Server
 - The Docker client is the CLI tool used to interact with Docker and send commands to the Docker server.
-- The Docker server (daemon) is responsible for managing containers, handling image operations, and communicating with the host OS.
+- The Docker server (daemon) is responsible for managing containers, handling image operations, and communicating with the host OS. So docker server is like the operating system for docker machine.
 
 ### How to install images from Docker Hub
 - To install an image from Docker Hub, you can use the `docker pull <image-name>` command.

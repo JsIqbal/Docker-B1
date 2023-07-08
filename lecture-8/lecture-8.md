@@ -86,6 +86,7 @@
 ### Thread or Virtual Process
 - A thread, also known as a virtual process, is a unit of execution within a process.
 - Multiple threads can exist within a single process and share the same memory space, allowing for concurrent execution.
+- So there is context switching in threads.
 
 - ``` When the computer starts the operating system's code is executed and the processor only knows the operating system. ```
 

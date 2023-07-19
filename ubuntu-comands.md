@@ -12,3 +12,5 @@ Linux OS:
 Processes communicate with hardware through system calls made to the kernel. The kernel acts as the OS.
 
 sudo usermod -aG docker <username> - remove sudo comand from docker
+
+ctrl + shift + v => preview markdown in vscode

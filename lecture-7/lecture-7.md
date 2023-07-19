@@ -36,6 +36,19 @@ Additional Docker Commands:
 - `docker start <container id>`: Start a created container.
 - `docker kill <container id>`: Terminate a container's process immediately.
 - `docker system prune`: Remove all stopped containers, networks not used by any container, dangling images, and dangling build cache.
+- `docker stop $(docker ps -q)` : stop all the running containers at once.
+
+```note
+Let's break down the command:
+
+docker ps: This command lists all the running containers on your system.
+
+$(docker ps -q): This part of the command executes the docker ps -q command, which outputs only the container IDs of the running containers. The output is then used as input for the docker stop command.
+
+docker stop: This command is used to stop one or more running containers.
+
+When you run the full command, it will stop all the running containers by passing their IDs to the docker stop command. Each container will be gracefully stopped, allowing it to perform any necessary cleanup before shutting down.
+```
 
 | Command                           | Description                                           |
 |-----------------------------------|-------------------------------------------------------|

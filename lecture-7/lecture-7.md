@@ -43,11 +43,15 @@ Let's break down the command:
 
 docker ps: This command lists all the running containers on your system.
 
-$(docker ps -q): This part of the command executes the docker ps -q command, which outputs only the container IDs of the running containers. The output is then used as input for the docker stop command.
+$(docker ps -q): This part of the command executes the docker ps -q command,
+which outputs only the container IDs of the running containers.
+The output is then used as input for the docker stop command.
 
 docker stop: This command is used to stop one or more running containers.
 
-When you run the full command, it will stop all the running containers by passing their IDs to the docker stop command. Each container will be gracefully stopped, allowing it to perform any necessary cleanup before shutting down.
+When you run the full command, it will stop all the running containers by passing their IDs to the docker stop command.
+Each container will be gracefully stopped,
+allowing it to perform any necessary cleanup before shutting down.
 ```
 
 | Command                           | Description                                           |

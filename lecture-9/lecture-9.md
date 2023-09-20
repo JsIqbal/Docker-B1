@@ -4,6 +4,7 @@
 - `docker rmi <image_id>`: To delete an image.
 - `docker build -t myimage .`: Create an image with the name "myimage." The `-t` flag means tag, which will be "latest" by default.
 - `docker build -t myimage:iqbal .`: Create an image with the name "myimage" and tag it as "iqbal."
+- `docker rmi <image name>:<image tag>`: To delete an image with specific tag.
 
 To create a server: a computer that runs 24/7.
 

@@ -65,6 +65,7 @@ COPY ./app.html .
 
 # Copy the 'nginx.conf' file from the host to the Nginx configuration folder in the container.
 COPY ./nginx.conf /etc/nginx/nginx.conf
+```
 
 - This Dockerfile uses the official Nginx base image from Docker Hub, sets up a working directory inside the container, and copies your HTML and Nginx configuration files into it.
 

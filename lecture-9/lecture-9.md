@@ -50,7 +50,7 @@ We use Dockerfile to create an image.
 
 FROM nginx:alpine  # Base image. This line will install Nginx.
 
-docker exec -it f5365a010bf7 sh  # Interact with the Nginx file system.
+docker exec -it <nginx image id> sh  # Interact with the Nginx file system.
 
 WORKDIR /app  # Create a folder named 'app' and get inside it.
 

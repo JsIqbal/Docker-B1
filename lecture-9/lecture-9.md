@@ -67,16 +67,17 @@ COPY ./app.html .
 COPY ./nginx.conf /etc/nginx/nginx.conf
 
 
-```This Dockerfile uses the official Nginx base image from Docker Hub, sets up a working directory inside the container, and copies your HTML and Nginx configuration files into it.
+```
+This Dockerfile uses the official Nginx base image from Docker Hub, sets up a working directory inside the container, and copies your HTML and Nginx configuration files into it.
 
-```Build the Docker Image: Run the following command in the same directory as your Dockerfile to build the Docker image:
+Build the Docker Image: Run the following command in the same directory as your Dockerfile to build the Docker image:
 ```bash
 docker build -t my-nginx-image .
 ```
 
 ```This command tags the image as "my-nginx-image." You can choose any name you prefer.
 
-```Create and Run a Docker Container: Run the following command to create and run a Docker container from the image while mapping port 80:
+Create and Run a Docker Container: Run the following command to create and run a Docker container from the image while mapping port 80:
 ```bash
 docker run -d -p 80:80 my-nginx-image
 ```

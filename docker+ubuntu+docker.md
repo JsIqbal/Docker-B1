@@ -111,3 +111,7 @@ or
 docker commit <container_id> <repository>:<tag>
 docker commit 1234567890 my-custom-ubuntu:1.0
 ```
+
+### EXTRAS:
+docker run -p 3004:3004 --privileged -it -v /c/volume-map/static-html:/home/html  my-custom-ubuntu-image
+docker run -p 3004:80 -v '/\Program Files\Git\home\html:/usr/share/nginx/html' nginx

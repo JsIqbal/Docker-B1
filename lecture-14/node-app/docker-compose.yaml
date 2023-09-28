@@ -1,0 +1,34 @@
+version: "3.3"
+
+services:
+    db: # this is also my host. so when my applicaiton container will try to connect with my database the connection will be established with "db". This is the ip of the container mysql_db
+        container_name: mysql_db
+        image: mysql # from which image the container is created
+        restart: unless-stopped # restart the container if not running
+
+        environment: # mysql environment
+            - MYSQL_DATABASE=library
+            - MYSQL_ROOT_PASSWORD=123456
+        ports:
+            - 3030:3306 # forwarding ports from host machine to container port
+        volumes:
+            - db:/var/lib/mysql # question: the file is being created in which container? you said that the data from the mysql container is being saved in local pc.
+
+    app: # this is the ip of the node_app container
+        container_name: node_app # giving a name for the applicaiton container
+        build:
+            dockerfile: Dockerfile # name of the Dockerfile
+            context: . # build from the directory where the Dockerfile is located
+        depends_on: # means that the application container is dependent on the db container which is the mysql_db
+            - db
+        # env_file: ./.env # question: what is the meaning of this line?
+        # environment: # question: you can set environment variable for what? and where?
+        #     - DB_HOST=db
+        #     - DB_USER=root
+        #     - DB_PASSWORD=123456
+        ports:
+            - 5000:3000 # host machine port to applicaiton container port mapping
+        volumes:
+            - ./:/app # mapping with which directory?
+volumes:
+    db:

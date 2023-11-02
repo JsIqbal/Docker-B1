@@ -14,6 +14,8 @@
         - `$`: Normal user
 - `ctrl + l`: Changes the view in Git Bash
 - `echo <whatever you want>`: Prints the given text
+- `docker rmi $(docker images -q)`: remove all docker images
+
 
 ## Requirements for the Next Class
 

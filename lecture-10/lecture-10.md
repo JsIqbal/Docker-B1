@@ -21,7 +21,7 @@ docker run -p host_machine_port:container_port image_name
 For example, to forward port 4000 of the host machine to port 3306 of the MySQL container, you can use the following command:
 
 ```bash
-docker run -p 4000:3306 -e MYSQL_ROOT_PASSWORD=1234 mysql
+docker run -p 4000:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql
 ```
 
 to enter in the running container :

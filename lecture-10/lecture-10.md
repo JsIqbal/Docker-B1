@@ -70,3 +70,61 @@ mongo
 ```bash
 /etc/init.d/redis-server restart
 ```
+
+## Postgres:
+
+```bash
+sudo docker run -p 4000:5432 -e POSTGRES_PASSWORD=123456 postgres
+```
+
+* get inside the docker container using the postgres
+
+* get in the postgres cli:
+```bash
+psql -U postgres
+```
+
+* create database in the container:
+```bash
+CREATE DATABASE mydatabase;
+```
+
+* create role with pass inside the cli:
+```sql
+CREATE ROLE myuser WITH LOGIN PASSWORD 'mypassword';
+```
+
+* grant all privilages for the user in the database:
+
+```sql
+GRANT ALL PRIVILEGES ON DATABASE sharetrip TO myuser;
+```
+
+* show all databases in the cli:
+```sql
+\l
+```
+* get inside the database :
+
+```sql:
+\c database_name
+```
+
+* to see the tables:
+```sql
+\dt
+```
+
+* to get inside a specific schema:
+```sql
+\dt schema_name.*
+```
+
+* to get inside a specific table:
+```sql
+SELECT * FROM <table_name>;
+```
+* to exit the cli:
+```sql
+\q
+```

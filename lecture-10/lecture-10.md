@@ -41,3 +41,21 @@ and you should be able to access the database, for example, using tools like Tab
 
 This method of exposing a container's port to the host machine is known as port forwarding.
 
+## MongoDB:
+
+* start:
+  
+```bash
+sudo docker run -dp 27017:27017 -v local-mongo:/data/db --name local-mongo --restart=always mongo
+```
+* get into:
+
+```bash
+sudo docker exec -it local-mongo sh
+```
+
+* start mongo shell:
+
+```bash
+mongo
+```

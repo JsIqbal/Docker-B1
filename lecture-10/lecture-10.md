@@ -59,3 +59,14 @@ sudo docker exec -it local-mongo sh
 ```bash
 mongo
 ```
+
+## Redis:
+```bash
+/etc/init.d/redis-server stop
+```
+```bash
+/etc/init.d/redis-server start
+```
+```bash
+/etc/init.d/redis-server restart
+```

@@ -17,13 +17,6 @@
 - `docker rmi $(docker images -q)`: remove all docker images
 - `docker stop $(docker ps -q)`: stop all docker containers
 
-
-## Requirements for the Next Class
-
-- Ubuntu OS installed
-- Docker installed
-- Pull an Ubuntu image from Docker Hub inside Docker
-
 Additional Docker Commands:
 
 - `docker ps`: Lists Docker containers
@@ -37,3 +30,4 @@ Additional Docker Commands:
 - `$`: Normal user prompt
 - `touch filename`: Creates a new file in Linux
 - `cd ..`: Goes back to the previous folder
+- `docker exec -it <redis_container_name_or_id> redis-cli FLUSHALL` : This command will connect to the Redis server within the container and remove all data. The container will continue running with an empty Redis database.
